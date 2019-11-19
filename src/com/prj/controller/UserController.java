@@ -32,7 +32,7 @@ public class UserController {
     public String login(User user,HttpSession session,String yzm){
 
 
-        if(user.getUname().equals("admin")&& user.getPwd().equals("123") && strCode.equals(yzm) ){
+        if(user.getName().equals("admin")&& user.getPassword().equals("123") && strCode.equals(yzm) ){
 
             session.setAttribute("loginUser",user);
 
