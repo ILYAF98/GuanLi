@@ -21,6 +21,8 @@ public class UserController {
             'K',   '9' ,'L', '1','M',  '2','N',  'P', '3', 'Q', '4', 'R', 'S', 'T', 'U', 'V', 'W',
             'X', 'Y', 'Z'};
 
+    /*黄千赏是傻逼*/
+
 
     //验证码
     String strCode="";
