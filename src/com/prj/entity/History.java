@@ -48,7 +48,7 @@ public class History {
     }
 
     @Override
-    public String toString() {
+    public String  toString() {
         return "History{" +
                 "id=" + id +
                 ", uid=" + uid +
