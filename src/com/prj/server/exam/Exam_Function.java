@@ -4,7 +4,6 @@ import com.prj.entity.Exam;
 import com.prj.server.util.JDBCUtil;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCallback;
 
 
 import java.sql.PreparedStatement;
@@ -36,14 +35,11 @@ public class Exam_Function {
      */
     public void Delete(int id) {
 
-        template.execute (connection -> {
+        template.update (connection -> {
             sql = "Delete from exam where id =?";
             stem = connection.prepareStatement (sql);
             stem.setInt (1, id);
             return stem;
-        }, (PreparedStatementCallback < Object >) preparedStatement -> {
-            preparedStatement.execute ();
-            return null;
         });
     }
 
