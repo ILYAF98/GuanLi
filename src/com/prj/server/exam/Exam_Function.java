@@ -53,7 +53,7 @@ public class Exam_Function {
      */
     public void Add(Exam exam) {
 
-        template.execute (connection -> {
+        template.update (connection -> {
             sql = "insert into exam values (?,?,?,?,?,?);";
             stem = connection.prepareStatement (sql);
             stem.setInt (1, exam.getId ( ) );
@@ -63,9 +63,6 @@ public class Exam_Function {
             stem.setInt (5, exam.getMid ( ));
             stem.setString (6,exam.getImageUrl ( ) );
             return stem;
-        }, (PreparedStatementCallback < Object >) preparedStatement -> {
-            preparedStatement.execute ( );
-            return null;
         });
     }
 
