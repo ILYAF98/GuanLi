@@ -46,7 +46,7 @@ public  class Exam_Function {
     /**
      * 增加功能
      * @param exam Exam
-     */
+     * */
     public void Add(Exam exam) {
 
         template.update (connection -> {
@@ -62,11 +62,11 @@ public  class Exam_Function {
         });
     }
 
-    /**
+    /* *
      * 更新方法
      * @param id int
      * @param title String
-     */
+     * */
     public void UpdateTitle(int id, String title){
 
          template.update(connection -> {
