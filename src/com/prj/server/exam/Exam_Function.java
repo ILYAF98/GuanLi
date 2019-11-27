@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-public class Exam_Function {
+public  class Exam_Function {
         private JdbcTemplate template = new JdbcTemplate (JDBCUtil.getDs ());
         private String sql;
         private PreparedStatement stem;
@@ -39,7 +39,7 @@ public class Exam_Function {
             sql = "Delete from exam where id =?";
             stem = connection.prepareStatement (sql);
             stem.setInt (1, id);
-            return stem;
+           return stem;
         });
     }
 

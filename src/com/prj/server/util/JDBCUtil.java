@@ -27,16 +27,12 @@ public class JDBCUtil {
 
     }
 
-    /**
-     * 获取链接
-     */
+    /*获取链接*/
     public static Connection getConnection() throws SQLException {
         return ds.getConnection ();
     }
 
-    /**
-     * 获取DataSource对象
-     */
+    /*获取DataSource对象*/
     public static DataSource getDs() {
         return ds;
     }
