@@ -18,7 +18,7 @@ public  class Exam_Function {
      * 查询功能
      * @param id int
      * @return list List
-     */
+     * */
     public List < Exam > Find(int id) {
 
         return template.query (connection -> {
@@ -32,7 +32,7 @@ public  class Exam_Function {
     /**
      * 删除功能
      * @param id int
-     */
+     * */
     public void Delete(int id) {
 
         template.update (connection -> {
@@ -62,7 +62,7 @@ public  class Exam_Function {
         });
     }
 
-    /* *
+    /**
      * 更新方法
      * @param id int
      * @param title String
